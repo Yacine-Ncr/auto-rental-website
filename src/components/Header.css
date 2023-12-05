@@ -1,0 +1,77 @@
+/** @format */
+
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	display: flex;
+	gap: 10px;
+}
+.logo > img {
+	width: 9rem;
+	height: 5rem;
+}
+.logo-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.logo-title > span {
+	letter-spacing: 2px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+}
+
+.header-menu {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+}
+.header-menu > li:hover {
+	color: #00c4c4;
+	cursor: pointer;
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+.custom-active:hover {
+	font-size: 40px;
+}
+.header-menu > li > .active {
+	text-decoration: none;
+	color: white;
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+.header-menu > li > .active:hover {
+	color: #00c4c4;
+	cursor: pointer;
+	transform: scale(1.05);
+	transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+	.header > :nth-child(2) {
+		position: fixed;
+		right: 2rem;
+		z-index: 99;
+	}
+	.header-menu {
+		flex-direction: column;
+		background-color: #748d8d;
+		padding: 2rem;
+	}
+	.logo > img {
+		width: 4rem;
+		height: 5rem;
+	}
+	.logo-title > span {
+		letter-spacing: 2px;
+		font-family: Arial, Helvetica, sans-serif;
+		color: rgb(255, 255, 255);
+		font-size: 22px;
+	}
+}

@@ -1,0 +1,93 @@
+/** @format */
+
+.accordion-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background: #000000;
+	padding: 5rem 0;
+}
+.faq {
+	color: #00b9b9;
+	margin-bottom: 2rem;
+	margin-left: 1rem;
+}
+.container {
+	width: 80%;
+	top: 30%;
+	box-shadow: 2px 10px 35px 1px rgba(206, 206, 206, 0.3);
+}
+.wrap {
+	background: #000000;
+	border-bottom: 0.1px solid rgb(83, 83, 83);
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.wrap > h2 {
+	padding: 0.3rem 1rem;
+	font-size: 1.5rem;
+}
+.wrap > span {
+	margin-right: 1.5rem;
+	font-size: 2.5rem;
+}
+.dropdown {
+	background: #003b3b;
+	color: white;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid var(--orange);
+	border-top: 1px solid var(--orange);
+	padding: 0.3rem 1rem;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.dropdown.open {
+	max-height: 500px;
+	opacity: 1;
+}
+.dropdown > p {
+	font-size: 1.8rem;
+}
+
+@media screen and (max-width: 768px) {
+	.faq {
+		font-size: 1.6rem;
+	}
+	.container {
+		width: 85%;
+	}
+	.wrap > h2 {
+		padding: 0.3rem 1rem;
+		font-size: 0.9rem;
+		text-align: start;
+	}
+	.wrap > span {
+		margin-right: 1rem;
+		font-size: 1.6rem;
+		text-align: end;
+	}
+	.dropdown {
+		padding: 0.08rem 1rem;
+	}
+	.dropdown.open {
+		padding: 0rem 0.8rem;
+		height: max-content;
+		opacity: 1;
+	}
+	.dropdown > p {
+		font-size: 1rem;
+	}
+}
